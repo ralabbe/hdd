@@ -1,0 +1,24 @@
+<!-- Footer for the contact page -->
+<footer>
+    <div class="uk-container">
+        <div class="uk-text-center footer-right">
+            <?php echo the_custom_logo("thumbnail") ?>
+            <?php dynamic_sidebar( 'footer-right' ); ?>
+            <hr>
+            <p>&copy; <?php echo date("Y"); ?> HDD of Florida LLC</p>
+        </div>
+    </div>
+</footer>
+
+<div id="offcanvas-slide" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar text-white">
+        <a class="uk-offcanvas-close" uk-close></a>
+        <?php  wp_nav_menu( array('menu' => 'Main-Top', 'menu_class' => 'uk-navbar-nav uk-invisible@m','depth'=> 2, 'container'=> false, 'walker'=> new Navbar_Menu_Walker)); ?>
+    </div>
+</div>
+
+<?php
+    wp_footer();
+?>
+</body>
+</html>
